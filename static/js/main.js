@@ -26,7 +26,7 @@ $(function() {
     {% if conf.timezone %}
     var deadline = moment.tz(rawDeadline, "{{ conf.timezone }}");
     {% else %}
-    var deadline = moment.tz(rawDeadline, "Etc/GMT+12"); // Anywhere on Earth
+    var deadline = moment.tz(rawDeadline, "Etc/GMT-8"); // Anywhere on Earth
     {% endif %}
 
     // post-process date

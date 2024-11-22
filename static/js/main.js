@@ -77,7 +77,8 @@ $(function() {
   {% endfor %}
 
   // Reorder list
-  var today = moment();
+  // var today = moment();
+  var today = moment.tz("Etc/GMT+12");
   var confs = $('.conf').detach();
   confs.sort(function(a, b) {
     var aDeadline = deadlineByConf[a.id];
